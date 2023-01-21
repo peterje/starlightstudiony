@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Testimonial from "../components/Testimonial.astro";
+import TestimonialText from "../components/TestimonialText.astro";
+import { Picture } from "@astrojs/image/components";
+
+const review_1 =
+	"My daughter will not stop talking about it. You were fabulous, thank you again for making a little girl's dream come true.";
+
+const review_2 =
+	"So amazing! Super patient and gentle with the kids! Such a pleasure I would do this 100 more times! Highly recommended.";
+const review_3 =
+	"We just had Elsa over for my daughter’s 5th birthday and it was absolutely magical! Age appropriate and simply adorable. We had a small outdoor party in our backyard and it was just perfect. Highly recommend!";
+---
+
+<Layout title="Starlight Studio">
+	<div class="h-full flex flex-col w-full">
+		<section
+			title="Description"
+			class="bg-white w-full flex rounded-lg"
+		>
+			<div class="flex flex-col w-full p-20">
+				<h1
+					class="text-5xl text-rose-400 underline font-weight-700 my-4"
+				>
+					Celebrate Like Royalty
+				</h1>
+				<div class="flex flex-col text-xl space-y-6">
+					<p>
+						Starlight Studio specializes in
+						creating magical experiences for
+						children and families in the
+						Hudson Valley community by
+						bringing favorite childhood
+						fairytales to life.
+					</p>
+					<p>
+						Character performers with
+						extensive performing arts and
+						early childhood knowledge and
+						training, create magical
+						memories through meaningful
+						interactions and activities for
+						young children.
+					</p>
+
+					<p>
+						You can experience the magic of
+						Starlight Studio through one of
+						our Princess Party experiences
+						for you next celebration,
+						attending one of our community
+						events, or virtually with a
+						recorded message from a favorite
+						princess for a loved one.
+					</p>
+				</div>
+			</div>
+		<Picture alt="Princesses" class="hidden lg:block h-full object-contain" src="https://starlightstudiony.com/images/bannerEdit.jpg"  widths={[400, 800, 1200]} aspectRatio="1:0.8" />
+		</section>
+
+		<section
+			class="flex flex-col justify-center gap-20 bg-rose-300 p-20 bg-opacity-90"
+		>
+			<h1 class="text-5xl text-center underline">
+				Create Magical Memories
+			</h1>
+			<Testimonial
+				direction="left"
+				review={review_1}
+				author="Janine C."
+				image_url=""
+			/>
+			<div
+				class="flex gap-4 flex-col md:grid grid-cols-2 bg-transparent rounded-lg"
+			>
+				<div
+					class="bg-white rounded-lg shadow-md pb-16 lg:pb-0"
+				>
+					<TestimonialText
+						review={review_2}
+						author="Carmen C."
+					/>
+				</div>
+				<div
+					class="bg-white rounded-lg shadow-md pb-16 lg:pb-0"
+				>
+					<TestimonialText
+						review={review_3}
+						author="Mary S."
+					/>
+				</div>
+			</div>
+		</section>
+		<section
+			class="relative bg-white flex flex-col items-center justify-center md:grid grid-cols-2"
+		>
+		<Picture alt="Cinderella" class="hidden md:block" src="https://starlightstudiony.com/images/contact.jpg"  widths={[400, 800, 1200]} aspectRatio="1:0.8" />
+		<div class="flex flex-col align-center items-center">
+			<h1
+				class="text-5xl text-rose-400 font-weight-700 my-4 text-center p-10"
+			>
+				Ready to book your experience?
+			</h1>
+			<a
+				href="/book"
+				class="bg-rose-300 hover:bg-rose-400 transition-color duration-150 text-lg lg:text-xl rounded-lg p-4 text-white"
+				>Book Now</a
+			>
+		</div>
+		</section>
+	</div>
+</Layout>

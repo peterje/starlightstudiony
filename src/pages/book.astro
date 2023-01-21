@@ -1,0 +1,284 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Layout from "../layouts/Layout.astro";
+
+type Character = {
+	name: string;
+	color: string;
+};
+export const characters: Character[] = [
+	{ name: "Anna", color: "#6EE7B7" },
+	{ name: "Ariel", color: "#FDA4AF" },
+	{ name: "Belle", color: "#FDE047" },
+	{ name: "Cinderella", color: "#A5B4FC" },
+	{ name: "Elsa", color: "#7DD3FC" },
+	{ name: "Moana", color: "#FDBA74" },
+	{ name: "Aurora", color: "#F9A8D4" },
+	{ name: "Rapunzel", color: "#FCD34D" },
+	{ name: "Tiana", color: "#BEF264" },
+	{ name: "Jasmine", color: "#67E8F9" },
+	{ name: "Snow White", color: "#FDA4AF" },
+]
+---
+
+<Layout title="Starlight Studio - Book Today">
+	<div class="grid place-items-center p-4 bg-white">
+		<h1 class="text-5xl text-center">The Magic Starts Here</h1>
+		<h3 class="text-xl">Fill out this form to request a booking</h3>
+		<form
+			action="/api/book" method="post"
+			class="bg-white p-4 mt-4 rounded-lg flex flex-col gap-4 border border-rose-400 w-full md:w-3/4"
+		>
+			<h4 class="text-lg text-center underline">
+				General Information
+			</h4>
+			<div>
+				<label
+					for="name"
+					class="block text-sm font-medium text-gray-700"
+					>Name</label
+				>
+				<div class="mt-1">
+					<input
+						type="text"
+						name="name"
+						required
+						id="name"
+						class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
+						placeholder="Jane Doe"
+					/>
+				</div>
+			</div>
+			<div>
+				<label
+					for="email"
+					class="block text-sm font-medium text-gray-700"
+					>Email</label
+				>
+				<div class="mt-1">
+					<input
+						type="email"
+						required
+						name="email"
+						id="email"
+						class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
+						placeholder="you@example.com"
+					/>
+				</div>
+			</div>
+			<div class="flex md:flex-row flex-col gap-4">
+				<div>
+					<label
+						for="address"
+						class="block text-sm font-medium text-gray-700"
+						>Address</label
+					>
+					<div class="mt-1">
+						<input
+							type="text"
+							name="address"
+							required
+							id="text"
+							class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
+							placeholder="42 Wallaby Way"
+						/>
+					</div>
+				</div>
+				<div>
+					<label
+						for="city"
+						class="block text-sm font-medium text-gray-700"
+						>City</label
+					>
+					<div class="mt-1">
+						<input
+							type="text"
+							required
+							name="address"
+							id="address"
+							class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
+							placeholder="Sydney"
+						/>
+					</div>
+				</div>
+				<div>
+					<label
+						for="state"
+						class="block text-sm font-medium text-gray-700"
+						>State</label
+					>
+					<div class="mt-1">
+						<input
+							required
+							type="text"
+							name="state"
+							id="state"
+							class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
+							placeholder="NY"
+						/>
+					</div>
+				</div>
+			</div>
+			<h4 class="text-lg text-center underline mt-4">
+				Event Information
+			</h4>
+			<fieldset class="bg-white">
+				<legend
+					class="block text-sm font-medium text-gray-700"
+					>Event Type</legend
+				>
+				<div
+					class="mt-1 rounded-md shadow-sm -space-y-px"
+				>
+					<div>
+						<label
+							for="event-type"
+							class="sr-only"
+							>Event Type</label
+						>
+						<select
+							id="event-type"
+							name="event-type"
+							autocomplete="event-type"
+							class="focus:ring-pink-500 focus:border-pink-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300"
+						>
+							<option
+								>Private Party</option
+							>
+							<option
+								>Public Event</option
+							>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+			<div class="flex w-full justify-start gap-4">
+				<div>
+					<label
+						for="date"
+						class="block text-sm font-medium text-gray-700"
+						>Date</label
+					>
+					<div class="mt-1">
+						<input
+							type="date"
+							name="date"
+							id="date"
+							class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
+						/>
+					</div>
+				</div>
+				<div>
+					<label
+						for="time"
+						class="block text-sm font-medium text-gray-700"
+						>Time</label
+					>
+					<div class="mt-1">
+						<input
+							type="time"
+							name="time"
+							id="time"
+							class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<fieldset class="bg-white">
+				<span
+					class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-pink-100 text-pink-800"
+					>New!</span
+				>
+				<legend
+					class="block text-sm font-medium text-gray-700"
+					>Package</legend
+				>
+				<div
+					class="mt-1 rounded-md shadow-sm -space-y-px"
+				>
+					<div>
+						<label
+							for="package"
+							class="sr-only"
+							>Package</label
+						>
+						<select
+							id="package"
+							name="package"
+							autocomplete="package"
+							class="focus:ring-pink-500 focus:border-pink-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300"
+						>
+							<option
+								>Classic - 1
+								Performer</option
+							>
+							<option
+								>Classic - 2
+								Performers</option
+							>
+							<option
+								>Classic - Elsa
+								& Anna Special</option
+							>
+							<option
+								>Deluxe - 3
+								Performers</option
+							>
+							<option
+								>Deluxe - 4
+								Performers</option
+							>
+							<option
+								>Deluxe - 5
+								Performers</option
+							>
+						</select>
+					</div>
+				</div>
+				<a
+					href="/parties"
+					class="text-sm text-blue-800"
+				>
+					Learn more about our party packages.</a
+				>
+			</fieldset>
+			<fieldset class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3" name="characters" id='characters' >
+				<legend
+					class="block text-sm font-medium text-gray-700 underline"
+					>Characters</legend
+				>
+				{
+					characters.sort().map((character) => (
+						<div class="border-gray-200 divide-y divide-gray-200">
+							<div class="flex justify-center flex-col items-center py-4">
+								<div class="min-w-0 flex-1 text-sm text-center">
+									<label
+										for={character.name.toLowerCase()}
+										class="font-medium text-center text-lg text-gray-700 select-none"
+									>
+
+										{
+											character.name
+										}
+
+		<Picture alt="Princesses" style={{'background-color': character.color}} class={`rounded-3xl w-36 lg:w-48 p-2 shadow-md hover:shadow-xl transition-all duration-200 cursor-pointer my-2`} src={`/characters/${character.name.toLowerCase()}.jpg`}  widths={[400]} aspectRatio="1:1" />
+									</label>
+								</div>
+								<div class="flex items-center h-5">
+									<input
+										id={character.name.toLowerCase()}
+										name={character.name.toLowerCase()}
+										type="checkbox"
+										class="focus:ring-pink-500 h-5 w-5 text-pink-600 border-gray-300 rounded"
+									/>
+								</div>
+							</div>
+						</div>
+					))
+				}
+			</fieldset>
+			<input value="Request Booking" type="submit" class="bg-rose-200 hover:bg-rose-300 active:bg-rose-400 transition-colors duration-200 self-center w-1/2 rounded-md p-2 shadow-md"/>
+		</form>
+	</div>
+</Layout>

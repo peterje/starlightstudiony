@@ -1,0 +1,22 @@
+---
+import TestimonialImage from './TestimonialImage.astro';
+import TestimonialText from "./TestimonialText.astro";
+export interface Props {
+	author: string;
+	review: string;
+	image_url: string;
+	direction: 'left' | 'right';
+}
+const { author, review, image_url, direction } = Astro.props;
+---
+
+<div class="pb-16 bg-rose-200 lg:pb-0 lg:z-10 lg:relative rounded-lg shadow">
+	<div
+		class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8"
+	>
+
+		{direction === 'left' && <TestimonialImage/>}
+		<TestimonialText author={author} review={review}/>
+		{direction === 'right' && <TestimonialImage/> }
+	</div>
+</div>

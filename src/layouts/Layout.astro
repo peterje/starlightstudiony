@@ -1,0 +1,52 @@
+---
+export interface Props {
+	title: string;
+}
+
+import Navigation, {Link} from '../components/Navigation.astro';
+import Footer from "../components/Footer.astro";
+const { title } = Astro.props;
+const links: Link[] = [
+	{name: "Home", href: "/"},
+	{name: "Book Today", href: "/book"},
+	{name: "Characters", href: "/characters"},
+	{name: "Our Story", href: "/story"},
+	{name: "Parties", href: "/parties"},
+	{name: "Public Events", href: "/events"},
+	{name: "Casting", href: "/casting"},
+]
+
+---
+
+<!DOCTYPE html>
+<html lang="en" class="p-0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="">
+		<Navigation links={links} />
+		<div class="bg-white flex flex-col items-center">
+			        <div class="-ml-2 mr-2 flex items-center md:hidden">
+        </div>
+		</div>
+	<slot />
+	<Footer/>
+	</body>
+</html>
+<style is:global>
+@import url('https://fonts.cdnfonts.com/css/made-sunflower');
+@import url('https://fonts.cdnfonts.com/css/made-likes-script');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap');
+
+body {
+  font-family: Zilla Slab, serif;
+}
+h1 {
+  font-family: 'MADE Sunflower', sans-serif;
+}
+</style>
