@@ -1,7 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Picture } from "@astrojs/image/components";
+
+import {characters} from "../backend/data.ts"
 ---
 
 <Layout title="Starlight Studio - Book Today">
+<div class="bg-white">
+  <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+    <div class="space-y-12">
+      <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+        <p class="text-xl text-gray-500">Meet the Magical</p>
+	<h1 class="text-5xl text-center underline">Characters</h1>
+      </div>
+      <ul role="list" class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
+      {characters.map(character => (
+        <li>
+          <div class="space-y-6">
+										<Picture
+											alt={character.name}
+											style={{
+												"background-color":
+													character.color,
+											}}
+											class={`rounded-full h-48 w-48 mx-auto p-2 xl:w-56 xl:h-56 shadow-md hover:shadow-xl transition-all duration-200 cursor-pointer my-2`}
+											src={`/characters/${character.name.toLowerCase()}.jpg`}
+											widths={[
+												400,
+											]}
+											aspectRatio="1:1"
+										/>
 
+            <div class="space-y-2">
+              <div class="text-lg leading-6 font-medium space-y-1">
+                <h3>{character.name}</h3>
+              </div>
+            </div>
+          </div>
+        </li>
+
+
+      ))}
+      </ul>
+    </div>
+  </div>
+</div>
 </Layout>

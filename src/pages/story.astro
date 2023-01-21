@@ -1,7 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="Starlight Studio - Book Today">
-
+	<div class="my-20 mx-10 flex flex-col items-center">
+		<h1 class="text-5xl text-center underline mb-8">Our Story</h1>
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2  md:text-lg lg:text-xl">
+			<div class="flex align-middle flex-col ">
+				<p class="text-md ">
+					Welcome to Starlight Studio, and thank
+					you for getting to know who we are!
+					My passion behind this project is to
+					spark a joy for the magic of performing
+					arts by creating memorable character
+					experiences for children and families. I
+					want this to be an outlet for
+					imagination and opportunity for creative
+					collaboration in the hudson valley
+					community.
+				</p>
+				<Picture
+					alt="Pamela Edmonds - Founder of Starlight Studio"
+					class={`rounded-lg p-4 w-full max-w-xl mx-auto`}
+					src={`/images/pamela.png`}
+					widths={[400, 800, 1200]}
+					aspectRatio="1:1"
+				/>
+				<p>
+					Born and raised in Seattle, Washington,
+					as a child I was fortunate to be
+					surrounded by an abundance of performing
+					arts experiences for children and young
+					audiences. As a young adult, this
+					allowed me opportunities for on-stage
+					experience that set me on a path of
+					passion for the performing arts.
+				</p>
+			</div>
+			<div class="flex align-middle flex-col">
+				<p>
+					Moving to New Paltz, New York I fell in
+					love with the community, and I have been
+					serving the children and families of the
+					hudson valley as a professional in early
+					childhood education, in the classroom
+					and now in leadership as a Program
+					Director.
+				</p>
+				<Picture
+					alt="Pamela Edmonds - Founder of Starlight Studio"
+					class={`rounded-lg p-4 w-full max-w-xl mx-auto object-center object-contain`}
+					src={`/images/pamela2.jpg`}
+					widths={[400, 800, 1200]}
+					aspectRatio="3:4"
+				/>
+				<p>
+					My mission is to blend my love for
+					performing arts, and foundations of
+					early childhood education to create
+					enriching experiences for the children,
+					families, and artists of the hudson
+					valley.
+				</p>
+			</div>
+		</div>
+	</div>
 </Layout>

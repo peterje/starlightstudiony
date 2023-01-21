@@ -1,32 +1,18 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
-
-type Character = {
-	name: string;
-	color: string;
-};
-export const characters: Character[] = [
-	{ name: "Anna", color: "#6EE7B7" },
-	{ name: "Ariel", color: "#FDA4AF" },
-	{ name: "Belle", color: "#FDE047" },
-	{ name: "Cinderella", color: "#A5B4FC" },
-	{ name: "Elsa", color: "#7DD3FC" },
-	{ name: "Moana", color: "#FDBA74" },
-	{ name: "Aurora", color: "#F9A8D4" },
-	{ name: "Rapunzel", color: "#FCD34D" },
-	{ name: "Tiana", color: "#BEF264" },
-	{ name: "Jasmine", color: "#67E8F9" },
-	{ name: "Snow White", color: "#FDA4AF" },
-]
+import { characters } from "../backend/data";
+const show_success = Astro.url.searchParams.get("success") === "true";
 ---
 
 <Layout title="Starlight Studio - Book Today">
-	<div class="grid place-items-center p-4 bg-white">
-		<h1 class="text-5xl text-center">The Magic Starts Here</h1>
+	<div class="grid place-items-center p-4 bg-white mt-20">
+		<h1 class="text-5xl text-center underline">The Magic Starts Here</h1>
 		<h3 class="text-xl">Fill out this form to request a booking</h3>
+		<h4 class="text-md">No payment required</h4>
 		<form
-			action="/api/book" method="post"
+			action="/api/book"
+			method="post"
 			class="bg-white p-4 mt-4 rounded-lg flex flex-col gap-4 border border-rose-400 w-full md:w-3/4"
 		>
 			<h4 class="text-lg text-center underline">
@@ -243,7 +229,11 @@ export const characters: Character[] = [
 					Learn more about our party packages.</a
 				>
 			</fieldset>
-			<fieldset class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3" name="characters" id='characters' >
+			<fieldset
+				class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3"
+				name="characters"
+				id="characters"
+			>
 				<legend
 					class="block text-sm font-medium text-gray-700 underline"
 					>Characters</legend
@@ -257,12 +247,23 @@ export const characters: Character[] = [
 										for={character.name.toLowerCase()}
 										class="font-medium text-center text-lg text-gray-700 select-none"
 									>
-
 										{
 											character.name
 										}
 
-		<Picture alt="Princesses" style={{'background-color': character.color}} class={`rounded-3xl w-36 lg:w-48 p-2 shadow-md hover:shadow-xl transition-all duration-200 cursor-pointer my-2`} src={`/characters/${character.name.toLowerCase()}.jpg`}  widths={[400]} aspectRatio="1:1" />
+										<Picture
+											alt="Princesses"
+											style={{
+												"background-color":
+													character.color,
+											}}
+											class={`rounded-3xl w-36 lg:w-48 p-2 shadow-md hover:shadow-xl transition-all duration-200 cursor-pointer my-2`}
+											src={`/characters/${character.name.toLowerCase()}.jpg`}
+											widths={[
+												400,
+											]}
+											aspectRatio="1:1"
+										/>
 									</label>
 								</div>
 								<div class="flex items-center h-5">
@@ -278,7 +279,112 @@ export const characters: Character[] = [
 					))
 				}
 			</fieldset>
-			<input value="Request Booking" type="submit" class="bg-rose-200 hover:bg-rose-300 active:bg-rose-400 transition-colors duration-200 self-center w-1/2 rounded-md p-2 shadow-md"/>
+			<input
+				value="Request Booking"
+				type="submit"
+				class="bg-rose-200 hover:bg-rose-300 active:bg-rose-400 transition-colors duration-200 self-center w-1/2 rounded-md p-4 mb-4 shadow-md"
+			/>
 		</form>
 	</div>
+
+	<div
+		class={`${
+			show_success ? "fixed" : "hidden"
+		} bottom-0 inset-x-0 pb-2 sm:pb-5`}
+		id="success-banner"
+	>
+		<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+			<div
+				class="p-2 rounded-lg bg-green-600 shadow-lg sm:p-3"
+			>
+				<div
+					class="flex items-center justify-between flex-wrap"
+				>
+					<div
+						class="w-0 flex-1 flex items-center"
+					>
+						<span
+							class="flex p-2 rounded-lg bg-green-800"
+						>
+							<svg
+								class="h-6 w-6 text-white"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+								></path>
+							</svg>
+						</span>
+						<p
+							class="ml-3 font-medium text-white truncate"
+						>
+							<span class="md:hidden"
+								>Success! We
+								have recieved
+								your booking
+								request and will
+								get back to you
+								shortly.</span
+							>
+							<span
+								class="hidden md:inline"
+								>Success! We
+								have recieved
+								you booking
+								request and will
+								get back to you
+								shortly!</span
+							>
+						</p>
+					</div>
+					<div
+						class="order-2 flex-shrink-0 sm:order-3 sm:ml-2"
+					>
+						<button
+							id="dismiss-sucess"
+							type="button"
+							class="-mr-1 flex p-2 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-white"
+						>
+							<span class="sr-only"
+								>Dismiss</span
+							>
+							<svg
+								class="h-6 w-6 text-white"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M6 18L18 6M6 6l12 12"
+								></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </Layout>
+<script>
+	const success_banner = document.getElementById(
+		"success-banner"
+	) as HTMLDivElement;
+	const dismiss_button = document.getElementById(
+		"dismiss-sucess"
+	) as HTMLButtonElement;
+	dismiss_button.addEventListener("click", () => {
+		success_banner.classList.add("hidden");
+	});
+</script>
