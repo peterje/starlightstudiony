@@ -1,8 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
-import {getImage} from "@astrojs/image"
-
 import {characters, Character} from "../backend/data"
 ---
 
@@ -18,22 +16,22 @@ import {characters, Character} from "../backend/data"
       {characters.map((character: Character) => (
         <li>
           <div class="space-y-6">
-										<Image
-											alt={character.name}
-											format="webp"
-											style={{
-												"background-color":
-													character.color,
-											}}
-											class={`rounded-full h-48 w-48 mx-auto p-2 xl:w-56 xl:h-56 shadow-md hover:shadow-xl transition-all duration-200 cursor-pointer my-2`}
-											src={`/characters/${character.name.toLowerCase()}.webp`}
-											widths={[
-												400,
-											]}
-											width="400"
-											height="400"
-											aspectRatio="1:1"
-										/>
+		<Image
+			alt={character.name}
+			format="webp"
+			style={{
+				"background-color":
+					character.color,
+			}}
+			class={`rounded-full h-48 w-48 mx-auto p-2 xl:w-56 xl:h-56 shadow-md hover:shadow-xl transition-all duration-200 cursor-pointer my-2`}
+			src={`/characters/${character.name.toLowerCase()}.webp`}
+			widths={[
+				400,
+			]}
+			width="400"
+			height="400"
+			aspectRatio="1:1"
+		/>
 
             <div class="space-y-2">
               <div class="text-lg leading-6 font-medium space-y-1">
