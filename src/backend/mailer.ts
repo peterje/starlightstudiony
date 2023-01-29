@@ -1,5 +1,6 @@
-import Mailjet, { SendEmailV3_1, LibraryResponse } from "node-mailjet"
+import Mailjet, { SendEmailV3_1 } from "node-mailjet"
 import type { MessageRequest } from "../pages/api/message"
+import type { BookingRequest } from "../pages/api/book"
 
 export const send_message_email = async (message_request: MessageRequest) => {
 	const public_key = import.meta.env.MAILJET_PUBLIC_KEY as string
@@ -15,6 +16,9 @@ export const send_message_email = async (message_request: MessageRequest) => {
 		To: [
 		  {
 		    Email: 'petejedmonds@gmail.com',
+		  },
+		  {
+		    Email: 'starlightstudiony@gmail.com',
 		  },
 		],
 		TemplateLanguage: true,

@@ -18,9 +18,9 @@ export const post = async ({ request, redirect }: APIContext) => {
 	} satisfies MessageRequest
 	try {
 		await send_message_email(message)
-		return redirect('/book?success=true');
+		return redirect('/contact?success=true');
 	} catch (error) {
-		return new Response("Failed to create booking", { status: 500 })
+		return new Response("Failed to create message", { status: 500 })
 	}
 }
 
