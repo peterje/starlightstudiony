@@ -6,7 +6,7 @@ import {characters, Character} from "../backend/data"
 
 <Layout title="Starlight Studio - Book Today">
 <div class="bg-white">
-  <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8 lg:py-24">
     <div class="space-y-12">
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
         <p class="text-xl text-gray-500">Meet the Magical</p>
@@ -23,7 +23,7 @@ import {characters, Character} from "../backend/data"
 				"background-color":
 					character.color,
 			}}
-			class={`rounded-full h-48 w-48 mx-auto p-2 xl:w-56 xl:h-56 shadow-md hover:shadow-xl transition-all duration-200 cursor-pointer my-2`}
+			class={`rounded-full h-48 w-48 mx-auto p-2 xl:w-56 xl:h-56 shadow-md hover:shadow-xl transition-all duration-200 my-2`}
 			src={`/characters/${character.name.toLowerCase()}.webp`}
 			widths={[
 				400,
@@ -40,7 +40,6 @@ import {characters, Character} from "../backend/data"
             </div>
           </div>
         </li>
-
 
       ))}
       </ul>
