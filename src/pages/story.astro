@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Picture } from "@astrojs/image/components";
+import { Image } from "@astrojs/image/components";
 ---
 
 <Layout title="Starlight Studio - Our Story" description="Learn about Pamela, the founder of Starlight Studio">
@@ -20,11 +20,12 @@ import { Picture } from "@astrojs/image/components";
 					collaboration in the hudson valley
 					community.
 				</p>
-				<Picture
+				<Image
 					alt="Pamela Edmonds - Founder of Starlight Studio"
 					class={`rounded-lg w-full mx-auto object-center object-cover max-w-lg`}
-					src={`/images/pamela.png`}
-					widths={[400, 800, 1200]}
+					src={`/images/pamela.webp`}
+					format="webp"
+					width="800"
 					aspectRatio="1:1"
 				/>
 				<p>
@@ -48,11 +49,12 @@ import { Picture } from "@astrojs/image/components";
 					and now in leadership as a Program
 					Director.
 				</p>
-				<Picture
+				<Image
 					alt="Pamela Edmonds - Founder of Starlight Studio"
 					class={`rounded-lg w-full mx-auto object-center object-cover max-w-lg`}
-					src={`/images/pamela2.jpg`}
-					widths={[400, 800, 1200]}
+					format="webp"
+					src={`/images/pamela2.webp`}
+					width="800"
 					aspectRatio="3:4"
 				/>
 				<p>
