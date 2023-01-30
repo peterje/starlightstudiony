@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Testimonial from "../components/Testimonial.astro";
 import TestimonialText from "../components/TestimonialText.astro";
-import { Picture, Image } from "@astrojs/image/components";
+import { Image } from "@astrojs/image/components";
 
 const review_1 =
 	"My daughter will not stop talking about it. You were fabulous, thank you again for making a little girl's dream come true.";
@@ -107,7 +107,7 @@ const review_3 =
 		<section
 			class="relative bg-white flex flex-col items-center justify-center md:grid grid-cols-2"
 		>
-		<Picture alt="Cinderella" class="hidden md:block" format="webp" src="/characters/contact.webp"  widths={[400, 800, 1200]} aspectRatio="1:0.8" />
+		<Image alt="Cinderella" class="hidden md:block" format="webp" src="/characters/contact.webp"  width="800" aspectRatio="1:0.8" />
 		<div class="flex flex-col align-center items-center">
 			<h1
 				class="text-5xl text-rose-400 font-weight-700 my-4 text-center p-10"
