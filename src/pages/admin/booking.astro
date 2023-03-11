@@ -1,0 +1,87 @@
+---
+import AdminLayout from "@/layouts/AdminLayout.astro";
+import {supabaseAdmin} from "@/backend/supabase"
+const id = Astro.url.searchParams.get("id")
+const booking = await supabaseAdmin
+  .from('bookings')
+  .select()
+  .eq('id', id)
+  .single()
+
+const data = booking!.data!
+const date = new Date(`${data.date}T${data.time}Z`)
+data.date = date.toLocaleTimeString('en-US', {timeZone:'UTC',hour12:true,hour:'numeric',minute:'numeric', day:'numeric', month: 'short', year: 'numeric'})
+---
+
+<AdminLayout>
+	<div>
+	  <h3 class="text-lg leading-6 font-medium text-gray-900">Booking Request Information</h3>
+	  <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and event information.</p>
+	</div>
+	<div class="mt-5 border-t border-gray-200">
+	  <dl class="divide-y divide-gray-200">
+	    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
+		<div>
+	  <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+	  <select id="status" name="status" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+	    <option selected>1. Not Contacted</option>
+	    <option>2. Message Sent</option>
+	    <option>3. Invoice Sent</option>
+	    <option>4. Cast Needed </option>
+	    <option>5. Cast Scheduled </option>
+	    <option>6. Follow Up Sent </option>
+	  </select>
+	</div>
+      </dd>
+      <dd class="grid items-center">
+          <button type="button" class="inline-flex items-center px-4 py-2 mt-6 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">Update</button>
+      </dd>
+    </div>
+    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">Full name</dt>
+      <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <span class="flex-grow">{data.name}</span>
+      </dd>
+    </div>
+    <div class="py-4 sm:grid sm:py-5 sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">Email Address</dt>
+      <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <span class="flex-grow">{data.email}</span>
+      </dd>
+    </div>
+    <div class="py-4 sm:grid sm:py-5 sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">Event Date</dt>
+      <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <span class="flex-grow">{data.date}</span>
+      </dd>
+    </div>
+    <div class="py-4 sm:grid sm:py-5 sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">Event Type</dt>
+      <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <span class="flex-grow">{data.type}</span>
+      </dd>
+    </div>
+    <div class="py-4 sm:grid sm:py-5 sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">Event Characters</dt>
+      <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <span class="flex-grow">{data.characters.join(", ")}</span>
+      </dd>
+    </div>
+    <div class="py-4 sm:grid sm:py-5 sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">Event Location</dt>
+      <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <span class="flex-grow">{booking.data?.address + ", " +  booking.data.city + ", " + booking.data.state}</span>
+      </dd>
+    </div>
+  </dl>
+</div>
+</AdminLayout>
+
+<script>
+	import {supabase} from "@/supabase"
+	const update_status = async (id: string, new_status: string) => {
+		await supabase.from("bookings")
+		  .update({ id })
+		  .eq('status', new_status)
+	}
+</script>

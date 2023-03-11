@@ -1,0 +1,14 @@
+---
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import {supabaseAdmin} from "@/backend/supabase"
+const refreshToken = Astro.cookies.get('my-refresh-token').value
+const accessToken = Astro.cookies.get('my-access-token').value
+const {error} = await supabaseAdmin.auth.setSession({ refresh_token: refreshToken as string, access_token: accessToken as string})
+if(error){
+	return Astro.redirect("/admin/login")
+}
+
+---
+<AdminLayout title="Dashboard">
+<h1> Dashboard </h1>
+</AdminLayout>

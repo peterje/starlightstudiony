@@ -3,22 +3,6 @@ import Layout from "../layouts/Layout.astro";
 const show_success = Astro.url.searchParams.get("success") === "true";
 ---
 <Layout title="Starlight Studio - Contact Us" description="Fill out the form to send us a message.">
-<!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
 <div class="relative bg-white">
   <div class="absolute inset-0">
     <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
@@ -32,7 +16,6 @@ const show_success = Astro.url.searchParams.get("success") === "true";
           <div class="mt-3">
             <dt class="sr-only">Email</dt>
             <dd class="flex">
-              <!-- Heroicon name: outline/mail -->
               <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>

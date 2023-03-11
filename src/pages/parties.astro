@@ -3,580 +3,530 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 ---
 
-<Layout title="Starlight Studio - Parties" description="Learn about our offerings for private princess parties.">
-	<main class="lg:relative border-b">
-		<div
-			class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
-		>
-			<div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-				<h1
-					class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
-				>
-					<span class="block xl:inline"
-						>The perfect addition</span
-					>
-					<span
-						class="block text-rose-500 xl:inline"
-						>to any celebration.</span
-					>
-				</h1>
-				<p
-					class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl"
-				>
-					Every Starlight party is unique and
-					tailored to your group size, age range,
-					and character choice.
-				</p>
-			</div>
-		</div>
-		<div
-			class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
-		>
-			<Image
-				format="webp"
-				class="absolute inset-0 w-full h-full object-cover max-w-2xl mx-auto"
-				src="/characters/group.webp"
-				width="1200"
-				aspectRatio="5:4"
-			/>
-		</div>
-	</main>
-	<!-- This example requires Tailwind CSS v2.0+ -->
-	<div class="relative bg-white py-8">
-		<div
-			class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
-		>
-			<h2
-				class="text-base font-semibold tracking-wider text-rose-600 uppercase"
-			>
-				Celebrate Like Royalty
-			</h2>
-			<p
-				class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
-			>
-				The Party Experience
-			</p>
-			<p
-				class="mt-5 max-w-prose mx-auto text-xl text-gray-500"
-			>
-				All princess parties include these magical
-				elements
-			</p>
-			<div class="mt-12">
-				<div
-					class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-				>
-					<div class="pt-6">
-						<div
-							class="flow-root bg-rose-50 rounded-lg px-6 pb-8"
-						>
-							<div class="-mt-6">
-								<div>
-									<span
-										class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
-									>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="1.5"
-											stroke="currentColor"
-											class="w-6 h-6 text-white"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-											>
-											</path>
-										</svg>
-									</span>
-								</div>
-								<h3
-									class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
-								>
-									Photos &
-									Autographs
-								</h3>
-							</div>
-						</div>
-					</div>
+<Layout
+  title="Starlight Studio - Parties"
+  description="Learn about our offerings for private princess parties."
+>
+  <main class="lg:relative border-b">
+    <div
+      class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
+    >
+      <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+        <h1
+          class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
+        >
+          <span class="block xl:inline">The perfect addition</span>
+          <span class="block text-rose-400 xl:inline">to any celebration.</span>
+        </h1>
+        <p
+          class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl"
+        >
+          Every Starlight party is unique and tailored to your group size, age
+          range, and character choice.
+        </p>
+      </div>
+    </div>
+    <div
+      class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
+    >
+      <Image
+        format="webp"
+        class="absolute inset-0 w-full h-full object-cover max-w-2xl mx-auto"
+        src="/characters/group.webp"
+        width="1200"
+        aspectRatio="5:4"
+      />
+    </div>
+  </main>
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="relative bg-white py-8">
+    <div
+      class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
+    >
+      <h2
+        class="text-base font-semibold tracking-wider text-rose-400 uppercase"
+      >
+        Celebrate Like Royalty
+      </h2>
+      <p
+        class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
+      >
+        The Party Experience
+      </p>
+      <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+        All princess parties include these magical elements
+      </p>
+      <div class="mt-12">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="pt-6">
+            <div class="flow-root bg-rose-50 rounded-lg px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                >
+                  Photos & Autographs
+                </h3>
+              </div>
+            </div>
+          </div>
 
-					<div class="pt-6">
-						<div
-							class="flow-root bg-rose-50 rounded-lg px-6 pb-8"
-						>
-							<div class="-mt-6">
-								<div>
-									<span
-										class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
-									>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="1.5"
-											stroke="currentColor"
-											class="w-6 h-6 text-white"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-											>
-											</path>
-										</svg>
-									</span>
-								</div>
-								<h3
-									class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
-								>
-									Story
-									Time
-								</h3>
-							</div>
-						</div>
-					</div>
+          <div class="pt-6">
+            <div class="flow-root bg-rose-50 rounded-lg px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                >
+                  Story Time
+                </h3>
+              </div>
+            </div>
+          </div>
 
-					<div class="pt-6">
-						<div
-							class="flow-root bg-rose-50 rounded-lg px-6 pb-8"
-						>
-							<div class="-mt-6">
-								<div>
-									<span
-										class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
-									>
-										<!-- Heroicon name: outline/refresh -->
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="1.5"
-											stroke="currentColor"
-											class="w-6 h-6 text-white"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"
-											>
-											</path>
-										</svg>
-									</span>
-								</div>
-								<h3
-									class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
-								>
-									Music
-								</h3>
-							</div>
-						</div>
-					</div>
+          <div class="pt-6">
+            <div class="flow-root bg-rose-50 rounded-lg px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
+                  >
+                    <!-- Heroicon name: outline/refresh -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                >
+                  Music
+                </h3>
+              </div>
+            </div>
+          </div>
 
-					<div class="pt-6">
-						<div
-							class="flow-root bg-rose-50 rounded-lg px-6 pb-8"
-						>
-							<div class="-mt-6">
-								<div>
-									<span
-										class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
-									>
-										<!-- Heroicon name: outline/shield-check -->
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="1.5"
-											stroke="currentColor"
-											class="w-6 h-6 text-white"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
-											>
-											</path>
-										</svg>
-									</span>
-								</div>
-								<h3
-									class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
-								>
-									Dancing
-								</h3>
-							</div>
-						</div>
-					</div>
+          <div class="pt-6">
+            <div class="flow-root bg-rose-50 rounded-lg px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
+                  >
+                    <!-- Heroicon name: outline/shield-check -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                >
+                  Dancing
+                </h3>
+              </div>
+            </div>
+          </div>
 
-					<div class="pt-6">
-						<div
-							class="flow-root bg-rose-50 rounded-lg px-6 pb-8"
-						>
-							<div class="-mt-6">
-								<div>
-									<span
-										class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
-									>
-										<!-- Heroicon name: outline/cog -->
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="1.5"
-											stroke="currentColor"
-											class="w-6 h-6 text-white"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
-											>
-											</path>
-										</svg>
-									</span>
-								</div>
-								<h3
-									class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
-								>
-									Pixie
-									Dust
-									Wishes
-								</h3>
-							</div>
-						</div>
-					</div>
+          <div class="pt-6">
+            <div class="flow-root bg-rose-50 rounded-lg px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
+                  >
+                    <!-- Heroicon name: outline/cog -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                >
+                  Pixie Dust Wishes
+                </h3>
+              </div>
+            </div>
+          </div>
 
-					<div class="pt-6">
-						<div
-							class="flow-root bg-rose-50 rounded-lg px-6 pb-8"
-						>
-							<div class="-mt-6">
-								<div>
-									<span
-										class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
-									>
-										<!-- Heroicon name: outline/server -->
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="1.5"
-											stroke="currentColor"
-											class="w-6 h-6 text-white"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"
-											>
-											</path>
-										</svg>
-									</span>
-								</div>
-								<h3
-									class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
-								>
-									Royal
-									Ceremony
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- This example requires Tailwind CSS v2.0+ -->
-	<div class="bg-gray-50">
-		<div class="relative bg-rose-500">
-			<!-- Overlapping background -->
-			<div
-				aria-hidden="true"
-				class="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block"
-			>
-			</div>
+          <div class="pt-6">
+            <div class="flow-root bg-rose-50 rounded-lg px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center p-3 bg-rose-400 rounded-md shadow-lg"
+                  >
+                    <!-- Heroicon name: outline/server -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-medium text-gray-900 tracking-tight"
+                >
+                  Royal Ceremony
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="bg-gray-50">
+    <div class="relative bg-rose-400">
+      <!-- Overlapping background -->
+      <div
+        aria-hidden="true"
+        class="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block"
+      >
+      </div>
 
-			<div
-				class="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8"
-			>
-				<h1
-					class="text-4xl font-extrabold tracking-tight text-white sm:text-6xl"
-				>
-					<span class="block lg:inline"
-						>Prices for a party of any size</span
-					>
-				</h1>
-				<p class="mt-4 text-xl text-rose-100">
-					Have any questions or special requests?
-					Feel free to contact us for a quote.
-				</p>
-			</div>
+      <div
+        class="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8"
+      >
+        <h1
+          class="text-4xl font-extrabold tracking-tight text-white sm:text-6xl"
+        >
+          <span class="block lg:inline">Prices for a party of any size</span>
+        </h1>
+        <p class="mt-4 text-xl text-rose-100">
+          Have any questions or special requests? Feel free to contact us for a
+          quote.
+        </p>
+      </div>
 
-			<h2 class="sr-only">Plans</h2>
+      <h2 class="sr-only">Plans</h2>
 
-			<!-- Toggle -->
-			<div
-				class="relative mt-12 flex justify-center sm:mt-16"
-			>
-				<div class="bg-rose-600 p-0.5 rounded-lg flex">
-					<button
-						id="classic-button"
-						type="button"
-						class="btn-active"
-						>Classic Packages</button
-					>
-					<button
-						id="deluxe-button"
-						type="button"
-						class="btn-not-active"
-						>Deluxe Packages</button
-					>
-				</div>
-			</div>
+      <!-- Toggle -->
+      <div class="relative mt-12 flex justify-center sm:mt-16">
+        <div class="bg-rose-400 p-0.5 rounded-lg flex border-white border-2">
+          <button id="classic-button" type="button" class="btn-active"
+            >Classic Packages</button
+          >
+          <button id="deluxe-button" type="button" class="btn-not-active"
+            >Deluxe Packages</button
+          >
+        </div>
+      </div>
 
-			<!-- Cards -->
-			<div
-				class="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-10"
-			>
-				<!-- Decorative background -->
-				<div
-					aria-hidden="true"
-					class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-white rounded-tl-lg rounded-tr-lg lg:block"
-				>
-				</div>
+      <!-- Cards -->
+      <div
+        class="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-10"
+      >
+        <!-- Decorative background -->
+        <div
+          aria-hidden="true"
+          class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-white rounded-tl-lg rounded-tr-lg lg:block"
+        >
+        </div>
 
-				<div
-					class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3"
-				>
-					<div
-						class="bg-white lg:bg-transparent pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12"
-					>
-						<div>
-							<h3
-								id='heading-1'
-								class="text-rose-600 text-sm font-semibold uppercase tracking-wide"
-							>
-								1 Performer
-							</h3>
-							<div
-								class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
-							>
-								<div
-									class="mt-3 flex items-center"
-								>
-									<p
-										id='price-1'
-										class="text-rose-600 text-4xl font-extrabold tracking-tight"
-									>
-										$240
-									</p>
-								</div>
-								<a
-									href="/book"
-									class="bg-white text-rose-500 hover:bg-rose-50 mt-6 w-full inline-block py-2 px-8 border border-rose-400 rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full"
-									>Book
-									Now</a
-								>
-							</div>
-						</div>
-						<Image
-							widths={[200, 400, 800]}
-							id="image-1-classic"
-							format="webp"
-							class="rounded-xl m-4 mx-auto outline-white outline bg-white"
-							src="/characters/single.webp"
-							width="400"
-							height="400"
-							aspectRatio="1:1"
-						/>
-						<Image
-							widths={[200, 400, 800]}
-							id="image-1-deluxe"
-							format="webp"
-							class="hidden rounded-xl m-4 mx-auto outline-white outline bg-white"
-							src="/characters/triple.webp"
-							width="400"
-							height="400"
-							aspectRatio="1:1"
-						/>
-					</div>
-					<div
-						class="bg-rose-600 pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12"
-					>
-						<div>
-							<h3
-								id='heading-2'
-								class="text-white text-sm font-semibold uppercase tracking-wide"
-							>
-								Elsa and Anna
-							</h3>
-							<div
-								class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
-							>
-								<div
-									class="mt-3 flex items-center"
-								>
-									<p
-										id='price-2'
-										class="text-white text-4xl font-extrabold tracking-tight"
-									>
-										$240
-									</p>
-								</div>
-								<a
-									href="/book"
-									class="bg-white text-rose-500 hover:bg-rose-50 mt-6 w-full inline-block py-2 px-8 border border-rose-400 rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full"
-									>Book
-									Now</a
-								>
-							</div>
-						</div>
-						<Image
-							format="webp"
-							class="rounded-xl object-top aspect-[2/3] m-4 mx-auto outline-white outline bg-white"
-							id='image-2-classic'
-							src="/characters/snowprincess.webp"
-							width="400"
-							aspectRatio="2:3"
-						/>
-						<Image
-							format="webp"
-							class="hidden rounded-xl object-top m-4 mx-auto outline-white outline bg-white"
-							id='image-2-deluxe'
-							src="/characters/all.webp"
-							width="600"
-							aspectRatio="1:0.7"
-						/>
-					</div>
+        <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
+          <div
+            class="bg-white lg:bg-transparent pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12"
+          >
+            <div>
+              <h3
+                id="heading-1"
+                class="text-rose-400 text-sm font-semibold uppercase tracking-wide"
+              >
+                1 Performer
+              </h3>
+              <div
+                class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
+              >
+                <div class="mt-3 flex items-center">
+                  <p
+                    id="price-1"
+                    class="text-rose-400 text-4xl font-extrabold tracking-tight"
+                  >
+                    $240
+                  </p>
+                </div>
+                <a
+                  href="/book"
+                  class="bg-white text-rose-500 hover:bg-rose-50 mt-6 w-full inline-block py-2 px-8 border border-rose-400 rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+            <Image
+              widths={[200, 400, 800]}
+              id="image-1-classic"
+              format="webp"
+              class="rounded-xl m-4 mx-auto outline-white outline bg-white"
+              src="/characters/single.webp"
+              width="400"
+              height="400"
+              aspectRatio="1:1"
+            />
+            <Image
+              widths={[200, 400, 800]}
+              id="image-1-deluxe"
+              format="webp"
+              class="hidden rounded-xl m-4 mx-auto outline-white outline bg-white"
+              src="/characters/triple.webp"
+              width="400"
+              height="400"
+              aspectRatio="1:1"
+            />
+          </div>
+          <div
+            class="bg-rose-400 pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12 border-white border-2"
+          >
+            <div>
+              <h3
+                id="heading-2"
+                class="text-white text-sm font-semibold uppercase tracking-wide"
+              >
+                Elsa and Anna
+              </h3>
+              <div
+                class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
+              >
+                <div class="mt-3 flex items-center">
+                  <p
+                    id="price-2"
+                    class="text-white text-4xl font-extrabold tracking-tight"
+                  >
+                    $390
+                  </p>
+                </div>
+                <a
+                  href="/book"
+                  class="bg-white text-rose-500 hover:bg-rose-50 mt-6 w-full inline-block py-2 px-8 border border-rose-400 rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+            <Image
+              format="webp"
+              class="rounded-xl object-top aspect-[2/3] m-4 mx-auto outline-white outline bg-white"
+              id="image-2-classic"
+              src="/characters/snowprincess.webp"
+              width="400"
+              aspectRatio="2:3"
+            />
+            <Image
+              format="webp"
+              class="hidden rounded-xl object-top m-4 mx-auto outline-white outline bg-white"
+              id="image-2-deluxe"
+              src="/characters/all.webp"
+              width="600"
+              aspectRatio="1:0.7"
+            />
+          </div>
 
-					<div
-						class="bg-white pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12"
-					>
-						<div>
-							<h3
-								id='heading-3'
-								class="text-rose-600 text-sm font-semibold uppercase tracking-wide"
-							>
-								2 Performer
-							</h3>
-							<div
-								class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
-							>
-								<div
-									class="mt-3 flex items-center"
-								>
-									<p
-										id='price-3'
-										class="sm:text-rose-600 text-4xl font-extrabold tracking-tight"
-									>
-										$355
-									</p>
-								</div>
-								<a
-									href="/book"
-									class="bg-white text-rose-500 hover:bg-rose-50 mt-6 w-full inline-block py-2 px-8 border border-rose-400 rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full"
-									>Book
-									Now</a
-								>
-							</div>
-						</div>
-						<h4 class="sr-only">
-							Features
-						</h4>
-						<Image
-							format="webp"
-							id="image-3-classic"
-							width="400"
-							class="rounded-xl m-4 mx-auto outline-white outline bg-white"
-							src="/characters/double.webp"
-							aspectRatio="1:1"
-						/>
-						<Image
-							id="image-3-deluxe"
-							format="webp"
-							width="400"
-							class="hidden rounded-xl m-4 mx-auto outline-white outline bg-white"
-							src="/characters/five.webp"
-							aspectRatio="1:0.9"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <div class="bg-white pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12">
+            <div>
+              <h3
+                id="heading-3"
+                class="text-rose-400 text-sm font-semibold uppercase tracking-wide"
+              >
+                2 Performer
+              </h3>
+              <div
+                class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
+              >
+                <div class="mt-3 flex items-center">
+                  <p
+                    id="price-3"
+                    class="sm:text-rose-400 text-4xl font-extrabold tracking-tight"
+                  >
+                    $355
+                  </p>
+                </div>
+                <a
+                  href="/book"
+                  class="bg-white text-rose-500 hover:bg-rose-50 mt-6 w-full inline-block py-2 px-8 border border-rose-400 rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+            <h4 class="sr-only">Features</h4>
+            <Image
+              format="webp"
+              id="image-3-classic"
+              width="400"
+              class="rounded-xl m-4 mx-auto outline-white outline bg-white"
+              src="/characters/double.webp"
+              aspectRatio="1:1"
+            />
+            <Image
+              id="image-3-deluxe"
+              format="webp"
+              width="400"
+              class="hidden rounded-xl m-4 mx-auto outline-white outline bg-white"
+              src="/characters/five.webp"
+              aspectRatio="1:0.9"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
-	.btn-active {
-		@apply relative bg-white py-2 px-6 border-rose-600 rounded-md shadow-sm text-sm font-medium text-rose-700 whitespace-nowrap hover:bg-rose-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-700 focus:ring-white focus:z-10;
-	}
+  .btn-active {
+    @apply relative bg-white py-2 px-6 border-rose-400 rounded-md shadow-sm text-sm font-medium text-rose-500 whitespace-nowrap hover:bg-rose-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-700 focus:ring-white focus:z-10;
+  }
 
-	.btn-not-active {
-		@apply ml-0.5 relative py-2 px-6 border border-transparent rounded-md text-sm font-medium text-rose-200 whitespace-nowrap hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-600 focus:ring-white focus:z-10;
-	}
+  .btn-not-active {
+    @apply ml-0.5 relative py-2 px-6 border border-transparent rounded-md text-sm font-medium text-rose-200 whitespace-nowrap hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-400 focus:ring-white focus:z-10;
+  }
 </style>
 
 <script>
-	const classic_prices = ["$245", "$390", "$355"]
-	const deluxe_prices = ["$495", "$625", "$765"]
-	const classic_titles = ["1 Performer", "Elsa and Anna", "2 Performers"]
-	const deluxe_titles = ["3 Performers", "4 Performers", "5 Performers"]
-	const price_elements: HTMLParagraphElement[] = [
-		document.getElementById('price-1') as HTMLParagraphElement,
-		document.getElementById('price-2') as HTMLParagraphElement,
-		document.getElementById('price-3') as HTMLParagraphElement,
-	]
+  const classic_prices = ["$245", "$390", "$355"];
+  const deluxe_prices = ["$495", "$625", "$765"];
+  const classic_titles = ["1 Performer", "Elsa and Anna", "2 Performers"];
+  const deluxe_titles = ["3 Performers", "4 Performers", "5 Performers"];
+  const price_elements: HTMLParagraphElement[] = [
+    document.getElementById("price-1") as HTMLParagraphElement,
+    document.getElementById("price-2") as HTMLParagraphElement,
+    document.getElementById("price-3") as HTMLParagraphElement,
+  ];
 
-	const deluxe_images: HTMLParagraphElement[] = [
-		document.getElementById('image-1-deluxe') as HTMLImageElement,
-		document.getElementById('image-2-deluxe') as HTMLImageElement,
-		document.getElementById('image-3-deluxe') as HTMLImageElement,
-	]
+  const deluxe_images: HTMLParagraphElement[] = [
+    document.getElementById("image-1-deluxe") as HTMLImageElement,
+    document.getElementById("image-2-deluxe") as HTMLImageElement,
+    document.getElementById("image-3-deluxe") as HTMLImageElement,
+  ];
 
-	const classic_images: HTMLParagraphElement[] = [
-		document.getElementById('image-1-classic') as HTMLImageElement,
-		document.getElementById('image-2-classic') as HTMLImageElement,
-		document.getElementById('image-3-classic') as HTMLImageElement,
-	]
+  const classic_images: HTMLParagraphElement[] = [
+    document.getElementById("image-1-classic") as HTMLImageElement,
+    document.getElementById("image-2-classic") as HTMLImageElement,
+    document.getElementById("image-3-classic") as HTMLImageElement,
+  ];
 
-	const heading_elements: HTMLParagraphElement[] = [
-		document.getElementById('heading-1') as HTMLHeadingElement,
-		document.getElementById('heading-2') as HTMLHeadingElement,
-		document.getElementById('heading-3') as HTMLHeadingElement,
-	]
+  const heading_elements: HTMLParagraphElement[] = [
+    document.getElementById("heading-1") as HTMLHeadingElement,
+    document.getElementById("heading-2") as HTMLHeadingElement,
+    document.getElementById("heading-3") as HTMLHeadingElement,
+  ];
 
-	const classic_button = document.getElementById(
-		"classic-button"
-	) as HTMLButtonElement;
-	const deluxe_button = document.getElementById(
-		"deluxe-button"
-	) as HTMLButtonElement;
+  const classic_button = document.getElementById(
+    "classic-button"
+  ) as HTMLButtonElement;
+  const deluxe_button = document.getElementById(
+    "deluxe-button"
+  ) as HTMLButtonElement;
 
-	classic_button.addEventListener("click", () => {
-		classic_button.classList.add("btn-active");
-		classic_button.classList.remove("btn-not-active");
-		deluxe_button.classList.remove("btn-active");
-		deluxe_button.classList.add("btn-not-active");
-		for(let i = 0; i<price_elements.length; i++){
-			price_elements[i].innerText = classic_prices[i]
-			heading_elements[i].innerText = classic_titles[i]
-			classic_images[i].classList.toggle('hidden')
-			deluxe_images[i].classList.toggle('hidden')
-		}
-	});
+  classic_button.addEventListener("click", () => {
+    classic_button.classList.add("btn-active");
+    classic_button.classList.remove("btn-not-active");
+    deluxe_button.classList.remove("btn-active");
+    deluxe_button.classList.add("btn-not-active");
+    for (let i = 0; i < price_elements.length; i++) {
+      price_elements[i].innerText = classic_prices[i];
+      heading_elements[i].innerText = classic_titles[i];
+      classic_images[i].classList.toggle("hidden");
+      deluxe_images[i].classList.toggle("hidden");
+    }
+  });
 
-	deluxe_button.addEventListener("click", () => {
-		deluxe_button.classList.add("btn-active");
-		deluxe_button.classList.remove("btn-not-active");
-		classic_button.classList.remove("btn-active");
-		classic_button.classList.add("btn-not-active");
-		for(let i = 0; i<price_elements.length; i++){
-			price_elements[i].innerText = deluxe_prices[i]
-			heading_elements[i].innerText = deluxe_titles[i]
-			classic_images[i].classList.toggle('hidden')
-			deluxe_images[i].classList.toggle('hidden')
-		}
-	});
+  deluxe_button.addEventListener("click", () => {
+    deluxe_button.classList.add("btn-active");
+    deluxe_button.classList.remove("btn-not-active");
+    classic_button.classList.remove("btn-active");
+    classic_button.classList.add("btn-not-active");
+    for (let i = 0; i < price_elements.length; i++) {
+      price_elements[i].innerText = deluxe_prices[i];
+      heading_elements[i].innerText = deluxe_titles[i];
+      classic_images[i].classList.toggle("hidden");
+      deluxe_images[i].classList.toggle("hidden");
+    }
+  });
 </script>

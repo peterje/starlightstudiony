@@ -1,4 +1,15 @@
 {
   "extends": "astro/tsconfigs/strictest",
-   "types": ["@astrojs/image/client"]
+  "types": ["@astrojs/image/client"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@backend/*": ["src/backend/*"],
+      "@/*": ["src/*"]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  }
 }

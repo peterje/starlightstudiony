@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="initial-scale=1.0, width=device-width"
+		/>
+		<link rel="icon" type="image" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Starlight Studio</title>
+	</head>
+	<slot/>
+<script>
+	
+import { supabase } from "../supabase";
+	console.log("supabase running...")
+	supabase.auth.onAuthStateChange((event, session) => {
+		if(session && (event === "SIGNED_IN" || event === "TOKEN_REFRESHED")){
+			const maxAge = 100 * 365 * 24 * 60 * 60; // 100 years, never expires
+			document.cookie = `my-access-token=${session.access_token}; path=/; max-age=${maxAge}; SameSite=Lax; secure`;
+			document.cookie = `my-refresh-token=${session.refresh_token}; path=/; max-age=${maxAge}; SameSite=Lax; secure`;
+		}else if(event === "SIGNED_OUT" || event === "USER_DELETED"){
+			const expires = new Date(0).toUTCString();
+			document.cookie = `my-access-token=; path=/; expires=${expires}; SameSite=Lax; secure`;
+			document.cookie = `my-refresh-token=; path=/; expires=${expires}; SameSite=Lax; secure`;
+		}
+	});
+</script>

@@ -80,8 +80,8 @@ const show_success = Astro.url.searchParams.get("success") === "true";
 						<input
 							type="text"
 							required
-							name="address"
-							id="address"
+							name="city"
+							id="city"
 							class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-gray-300 rounded-md"
 							placeholder="Sydney"
 						/>
@@ -147,6 +147,7 @@ const show_success = Astro.url.searchParams.get("success") === "true";
 					>
 					<div class="mt-1">
 						<input
+							required
 							type="date"
 							name="date"
 							id="date"
@@ -162,6 +163,7 @@ const show_success = Astro.url.searchParams.get("success") === "true";
 					>
 					<div class="mt-1">
 						<input
+							required
 							type="time"
 							name="time"
 							id="time"

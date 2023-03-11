@@ -4,27 +4,21 @@ import Testimonial from "../components/Testimonial.astro";
 import TestimonialText from "../components/TestimonialText.astro";
 import { Image } from "@astrojs/image/components";
 
-const review_1 =
-	"My daughter will not stop talking about it. You were fabulous, thank you again for making a little girl's dream come true.";
-
-const review_2 =
-	"So amazing! Super patient and gentle with the kids! Such a pleasure I would do this 100 more times! Highly recommended.";
-const review_3 =
-	"We just had Elsa over for my daughter’s 5th birthday and it was absolutely magical! Age appropriate and simply adorable. We had a small outdoor party in our backyard and it was just perfect. Highly recommend!";
+const review_1 = "My daughter will not stop talking about it. You were fabulous, thank you again for making a little girl's dream come true.";
+const review_2 = "So amazing! Super patient and gentle with the kids! Such a pleasure I would do this 100 more times! Highly recommended.";
+const review_3 = "We just had Elsa over for my daughter’s 5th birthday and it was absolutely magical! Age appropriate and simply adorable. We had a small outdoor party in our backyard and it was just perfect. Highly recommend!";
 ---
 
 <Layout title="Starlight Studio" description="Starlight Studio is a princess party event service for both public and private parties.">
 <main class="lg:relative">
 		<div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
 			<div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-				<h1
-					class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
-				>
+				<h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
 					<span class="block xl:inline"
 						>Celebrate like</span
 					>
 					<span
-						class="block text-rose-500 xl:inline"
+						class="block text-rose-400 xl:inline"
 						>Royalty.</span
 					>
 				</h1>
@@ -71,49 +65,27 @@ const review_3 =
 	</main>
 	<div class="h-full flex flex-col w-full">
 
-		<section
-			class="flex flex-col justify-center gap-20 bg-white p-20"
-		>
-			<h1 class="text-5xl text-center">
-				Create Magical Memories
-			</h1>
+		<section class="flex flex-col justify-center gap-20 bg-white p-20">
+			<h1 class="text-6xl text-center">Create Magical Memories</h1>
 			<Testimonial
 				direction="left"
 				review={review_1}
 				author="Janine C."
 				image_url=""
 			/>
-			<div
-				class="flex gap-4 flex-col md:grid grid-cols-2 bg-transparent rounded-lg"
-			>
-				<div
-					class="bg-rose-100 rounded-lg shadow-md pb-16 lg:pb-0"
-				>
-					<TestimonialText
-						review={review_2}
-						author="Carmen C."
-					/>
+			<div class="flex gap-4 flex-col md:grid grid-cols-2 bg-transparent rounded-lg">
+				<div class="bg-rose-100 rounded-lg shadow-md pb-16 lg:pb-0">
+					<TestimonialText review={review_2} author="Carmen C."/>
 				</div>
-				<div
-					class="bg-rose-100 rounded-lg shadow-md pb-16 lg:pb-0"
-				>
-					<TestimonialText
-						review={review_3}
-						author="Mary S."
-					/>
+				<div class="bg-rose-100 rounded-lg shadow-md pb-16 lg:pb-0">
+					<TestimonialText review={review_3} author="Mary S."/>
 				</div>
 			</div>
 		</section>
-		<section
-			class="relative bg-white flex flex-col items-center justify-center md:grid grid-cols-2"
-		>
+		<section class="relative bg-white flex flex-col items-center justify-center md:grid grid-cols-2">
 		<Image alt="Cinderella" class="hidden md:block" format="webp" src="/characters/contact.webp"  width="800" aspectRatio="1:0.8" />
 		<div class="flex flex-col align-center items-center">
-			<h1
-				class="text-5xl text-rose-400 font-weight-700 my-4 text-center p-10"
-			>
-				Ready to book your experience?
-			</h1>
+			<h1 class="text-5xl text-rose-400 font-weight-700 my-4 text-center p-10"> Ready to book your experience? </h1>
 			<a
 				href="/book"
 				class="bg-rose-300 hover:bg-rose-400 transition-color duration-150 text-lg lg:text-xl rounded-lg p-4 text-white"
