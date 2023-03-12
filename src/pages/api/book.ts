@@ -46,7 +46,6 @@ export const post = async ({ request, redirect }: APIContext) => {
       .filter((name) => request_data.get(name) === "on"),
   });
   // Fix for postgres date format
-  booking_request.date = new Date(booking_request.date).toISOString();
 
   try {
     const { data, error } = await supabaseAdmin

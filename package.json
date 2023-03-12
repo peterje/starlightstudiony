@@ -27,6 +27,7 @@
     "@types/react-dom": "^18.0.6",
     "alpinejs": "^3.0.0",
     "astro": "^1.9.0",
+    "dayjs": "^1.11.7",
     "node-mailjet": "^6.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
