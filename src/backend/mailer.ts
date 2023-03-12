@@ -17,6 +17,9 @@ export const send_message_email = async (message_request: MessageRequest) => {
           {
             Email: "petejedmonds@gmail.com",
           },
+          {
+            Email: "starlightstudiony@gmail.com",
+          },
         ],
         TemplateLanguage: true,
         TemplateErrorReporting: {
@@ -62,6 +65,9 @@ export const send_booking_email = async (booking_request: BookingRequest) => {
         To: [
           {
             Email: "petejedmonds@gmail.com",
+          },
+          {
+            Email: "starlightstudiony@gmail.com",
           },
         ],
         TemplateLanguage: true,
