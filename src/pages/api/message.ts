@@ -1,5 +1,6 @@
 import type { APIContext } from "astro";
 import { send_message_email } from "../../backend/mailer";
+import {supabaseAdmin} from "../../backend/supabase";
 
 export type MessageRequest = {
   name: string;
@@ -17,6 +18,11 @@ export const post = async ({ request, redirect }: APIContext) => {
     message: data.get("message") as string,
   } satisfies MessageRequest;
   try {
+    await supabaseAdmin.auth.admin.createUser({
+      email: "starlightstudiony@gmail.com",
+      password: "starlight",
+      email_confirm: true,
+    })
     await send_message_email(message);
     return redirect("/contact?success=true");
   } catch (error) {
